@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #e2e8f0;
 }
 
 .container {
@@ -14,12 +15,13 @@ body {
 }
 
 .sidebar {
-  border: 2px solid black;
-  padding: 16px;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  padding: 32px;
   grid-row: 1 / -3;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 56px;
 }
 
 .sidebar-content,
@@ -27,7 +29,7 @@ body {
   font-size: 20px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 .sidebar-content svg,
@@ -37,8 +39,8 @@ body {
 }
 
 .bracket {
-  height: 2px;
-  background-color: gainsboro;
+  height: 1px;
+  background-color: #1e293b;
 }
 
 img {
@@ -60,21 +62,32 @@ svg {
 .nav {
   display: flex;
   gap: 12px;
+  cursor: pointer;
+}
+
+.nav:hover {
+  color: #3b82f6;
+  font-weight: 900;
 }
 
 .icon {
   display: flex;
   justify-self: center;
   align-self: center;
-  padding-bottom: 6px;
+  padding-bottom: 7px;
 }
 
 .header {
-  border: 2px solid red;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   padding: 32px;
   align-items: center;
+  background-color: #f8fafc;
+}
+
+h1 {
+  font-size: 28px;
+  color: #020617;
 }
 
 .search-bar {
@@ -92,11 +105,13 @@ svg {
 .search-bar svg {
   justify-self: end;
   align-self: center;
+  width: 28px;
+  height: 28px;
 }
 
 .search-bar input[type="search"] {
   width: 100%;
-  height: 32px;
+  height: 40px;
   border-radius: 50px;
   padding: 12px;
 }
@@ -106,18 +121,26 @@ svg {
   align-items: center;
   justify-content: end;
   gap: 12px;
-  font-size: 18px;
+  font-size: 16px;
+  color: #020617;
 }
 
 .profile-pic {
-  width: 56px;
-  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
+  max-width: 56px;
+  max-height: 56px;
   overflow: hidden;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid gray;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+}
+
+.profile-pic:hover {
+  border: 3px solid #3b82f6;
 }
 
 .profile-pic img {
@@ -135,14 +158,126 @@ svg {
 
 .projects {
   grid-row: 1 / -3;
-  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.project {
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  border-left: 12px solid #0f172a;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-text h3 {
+  font-size: 20px;
+  color: #020617;
+}
+
+.project-text p {
+  font-size: 16px;
+  color: #020617;
+}
+
+h2 {
+  font-size: 24px;
+  color: #020617;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+  justify-content: end;
+  padding: 24px;
+}
+
+.star,
+.eye,
+.share {
+  cursor: pointer;
+}
+
+.star:focus,
+.eye:focus,
+.share:focus {
+  color: #3b82f6;
 }
 
 .announcements {
-  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.announcements-container {
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.announcement-bracket {
+  height: 1px;
+  background-color: #cbd5e1;
+}
+
+.announcement {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .trendings {
-  border: 2px solid orange;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
   grid-column: 2 / -1;
+}
+
+.trendings-container {
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.trending {
+  display: flex;
+  gap: 8px;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-profile .about {
+  color: #475569;
 }
