@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+  border: 2px solid black;
+  padding: 16px;
+  grid-row: 1 / -3;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar-content,
+.sidebar-settings {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-content svg,
+.sidebar-settings svg {
+  width: 32px;
+  height: 32px;
+}
+
+.bracket {
+  height: 2px;
+  background-color: gainsboro;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+#logo-ipsum {
+  width: 200px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  padding-bottom: 6px;
+}
+
+.header {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  padding: 32px;
+  align-items: center;
+}
+
+.search-bar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 2 / 3;
+  gap: 16px;
+}
+
+.search-bar form {
+  grid-column: 2 / 4;
+}
+
+.search-bar svg {
+  justify-self: end;
+  align-self: center;
+}
+
+.search-bar input[type="search"] {
+  width: 100%;
+  height: 32px;
+  border-radius: 50px;
+  padding: 12px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.profile-pic {
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.profile-pic img {
+  width: 150%;
+  height: auto;
+  margin-left: -10%;
+  margin-top: 40%;
+}
+
+.main-content {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+  grid-row: 1 / -3;
+  border: 2px solid blue;
+}
+
+.announcements {
+  border: 2px solid green;
+}
+
+.trendings {
+  border: 2px solid orange;
+  grid-column: 2 / -1;
+}
